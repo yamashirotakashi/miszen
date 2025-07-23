@@ -1,0 +1,48 @@
+{
+  "file_created": {
+    "conditions": {
+      "extensions": [".py", ".js", ".ts", ".jsx", ".tsx"]
+    },
+    "commands": ["analyze", "docgen"],
+    "description": "Triggered when a new code file is created"
+  },
+  "error_detected": {
+    "conditions": {
+      "severity": ["error", "critical"]
+    },
+    "commands": ["debug", "tracer"],
+    "description": "Triggered when an error is detected in the system"
+  },
+  "code_changed": {
+    "conditions": {
+      "min_lines": 10
+    },
+    "commands": ["codereview", "refactor"],
+    "description": "Triggered when significant code changes are made"
+  },
+  "test_failed": {
+    "conditions": {},
+    "commands": ["testgen", "debug"],
+    "description": "Triggered when a test fails"
+  },
+  "security_alert": {
+    "conditions": {},
+    "commands": ["secaudit"],
+    "description": "Triggered when a security issue is detected"
+  },
+  "pr_created": {
+    "conditions": {},
+    "commands": ["precommit", "consensus"],
+    "description": "Triggered when a pull request is created"
+  },
+  "planning_required": {
+    "conditions": {},
+    "commands": ["planner", "thinkdeep"],
+    "description": "Triggered when planning or deep analysis is needed"
+  },
+  "discussion_needed": {
+    "conditions": {},
+    "commands": ["chat", "challenge"],
+    "description": "Triggered when discussion or validation is needed"
+  }
+}
